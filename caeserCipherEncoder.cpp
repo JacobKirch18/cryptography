@@ -41,6 +41,10 @@ int generateRandomNumber() {
 
 string caesarEncode(string plainText, const int& shiftValue) {
 
+	if (shiftValue > 26) {
+		shiftValue = shiftValue % 26;
+	}	
+	
 	// loop to shift each character by the designated shift value
 	for (int i = 0; i < plainText.size(); i++) {
 
